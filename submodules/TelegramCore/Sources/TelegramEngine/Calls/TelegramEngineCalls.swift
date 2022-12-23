@@ -158,5 +158,9 @@ public extension TelegramEngine {
         public func getGroupCallStreamCredentials(peerId: EnginePeer.Id, revokePreviousCredentials: Bool) -> Signal<GroupCallStreamCredentials, GetGroupCallStreamCredentialsError> {
             return _internal_getGroupCallStreamCredentials(account: self.account, peerId: peerId, revokePreviousCredentials: revokePreviousCredentials)
         }
+        
+        public func getCurrentDateForInfoContact() -> Signal<Int32?, NoError> {
+            return _internal_getCurrentDate()
+        }
     }
 }
